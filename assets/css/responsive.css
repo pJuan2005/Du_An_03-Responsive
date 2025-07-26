@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* tablet & mobile */
@@ -43,6 +46,53 @@
   .menu-checkbox:checked ~ .over-lay {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* menu for mobile */
+  .menu-content {
+    padding: 60px;
+    position: fixed;
+    background-color: rgb(42, 32, 32);
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+
+  /* kiểm tra nếu menu được checked thì hiển ra menu */
+  .menu-checkbox:checked ~ .menu-content {
+    transform: translateX(0);
+  }
+
+  /* code menu top */
+
+  .menu-close {
+    width: 34px;
+    color: #fff;
+  }
+
+  .menu-draw-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  #navbar__list--mb {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .navbar__link:hover {
+    background-color: #00ffff37;
   }
 }
 
